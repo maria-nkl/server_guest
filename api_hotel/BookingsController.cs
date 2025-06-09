@@ -404,17 +404,6 @@ namespace api_hotel.Controllers
             return booking;
         }
 
-        // GET: api/Bookings
-        /*[HttpGet]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetAllBookings()
-        {
-            return await _context.Bookings
-                .Include(b => b.Services)
-                .Include(b => b.Guest)
-                .Include(b => b.RoomNumberNavigation)  // здесь не Room, а RoomNumberNavigation
-                .ToListAsync();
-
-        }*/
         // DTO для возврата информации о бронировании
         public class BookingDto
         {

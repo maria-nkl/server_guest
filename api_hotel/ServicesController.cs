@@ -35,5 +35,30 @@ namespace api_hotel.Controllers
 
             return service;
         }
+
+        // GET: api/Services/by-name?name=Развлечения
+        [HttpGet("by-name")]
+        public async Task<ActionResult<Service>> GetServiceByName([FromQuery] string name)
+        {
+            var service = await _context.Services
+                .FirstOrDefaultAsync(s => s.ServiceName == name);
+
+            if (service == null)
+                return NotFound();
+
+            return Ok(service);
+        }
+
+
+        // GET: api/Services/by-names?names=Завтрак&names=Уборка
+        [HttpGet("by-names")]
+        public async Task<ActionResult<IEnumerable<Service>>> GetServicesByNames([FromQuery] List<string> names)
+        {
+            var services = await _context.Services
+                .Where(s => names.Contains(s.ServiceName))
+                .ToListAsync();
+
+            return Ok(services);
+        }
     }
 }

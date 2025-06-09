@@ -132,3 +132,4 @@ C:\Users\nikol\VS project\api_hotel\api_hotel\obj\Debug\net8.0\refint\api_hotel.
 C:\Users\nikol\VS project\api_hotel\api_hotel\obj\Debug\net8.0\api_hotel.pdb
 C:\Users\nikol\VS project\api_hotel\api_hotel\obj\Debug\net8.0\api_hotel.genruntimeconfig.cache
 C:\Users\nikol\VS project\api_hotel\api_hotel\obj\Debug\net8.0\ref\api_hotel.dll
+C:\Users\nikol\VS project\api_hotel\api_hotel\obj\Debug\net8.0\api_hotel.sourcelink.json
