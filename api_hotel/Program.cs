@@ -46,4 +46,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotel API V1");
+    c.RoutePrefix = "swagger";
+});
+
+/*app.Urls.Add("http://*:80");*/
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<HotelContext>();
+    db.Database.Migrate();
+}
 app.Run();
